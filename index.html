@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+   .botones{
+    text-align:center;
+    }
+   img {
+    display: block;
+    margin: 50px auto;
+    }
+
+    body {
+        background-color: #e6f0ff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+        color: #1f3c88;
+        text-align: center;
+        font-size : 50px;
+    }
+
+    p {
+        color:#333333;
+        font-size: 32px;
+        margin-top:30px;
+    }
+
+    a {
+        display: block;
+        margin-top: 20px;
+        color: #6e6e6e;
+        text-decoration: none;
+        font-weight: bold;
+        font-size : 28px;
+    }
+    button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    }
+
+    button:hover {
+    background-color: #3e8e41;
+    }
+
+    .seccion {
+    margin-top: 30px;
+    padding: 15px;
+    }
+</style>
+
+    <title>CONECTA+</title>
+</head>
+<body> 
+<h1>CONECTA+</h1>
+<img src="RECURSOS/robotzito_kawai.jpg" alt="imagen de robotsito kawai" width="650">
+<p>Mediante diversas actividades recreativas, CONECTA+ tiene como propósito ser una guía en los procesos de comunicación y resolución de conflictos comunes dentro de una familia.
+</p>
+<div class="botones">
+    <button onclick="mostrarSeccion('FUN')">🎮 FUN</button>
+    <button onclick="mostrarSeccion('CHALLENGUE')">🎯 CHALLENGUE</button>
+    <button onclick="mostrarSeccion('READINGS')">📚 READINGS</button>
+    <button onclick="mostrarSeccion('ADVICES')">🙌 ADVICES</button>
+    <button onclick="mostrarSeccion('ÁLBUM')">🎶 ÁLBUM</button>
+</div>
+<div id="FUN" class="seccion">
+    <h2>Juego: ¿Qué harías si...?</h2>
+    <p>¿Qué harías si tu hijo/a no quisiera hablar contigo después de un mal día?</p>
+</div>
+<div id="CHALLENGUE" class="seccion" style="display:none;">
+    <h2>Reto semanal</h2>
+    <p>Escriban 3 cosas que admiran el uno del otro.</p>
+</div>
+
+<div id="READINGS" class="seccion" style="display:none;">
+    <h2>Lectura compartida</h2>
+    <p>Lean juntos un artículo sobre comunicación asertiva y comenten qué aprendieron.</p>
+</div>
+
+<div id="ADVICES" class="seccion" style="display:none;">
+    <h2>Recomendaciones</h2>
+    <p>Previo a la aplicación de cualquiera de la actividades recreativas,se recomienda hacer un pacto de mutuo respeto, pues, para dar uso de las herramientas, se va a requerir de completa honestidad y se quiere evitar inconvenientes. El ojetivo es crecer como familia.
+</div>
+<div id="ÁLBUM" class="seccion" style="display:none;">
+    <h2>PEQUEÑAS MUESTRAS DE AVANCES</h2>
+    <p>El propósito de esta sección apodada 🎶ALBUM es que usted y su hijo desarrollen su vínculo a través de música, videos, libros o cualquier cosa que genere conexión entre ustedes.</p>
+
+<script>
+function mostrarSeccion(id) {
+    document.getElementById('FUN').style.display = "none";
+    document.getElementById('CHALLENGUE').style.display = "none";
+    document.getElementById('READINGS').style.display = "none";
+    document.getElementById('ADVICES').style.display = "none";
+    document.getElementById('ÁLBUM').style.display = "none";
+    document.getElementById(id).style.display = "block";
+}
+</script>
+
+</body>
+</html>
