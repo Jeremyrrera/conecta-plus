@@ -2,63 +2,83 @@
 <html>
 <head>
     <style>
-   .botones{
-    text-align:center;
-    }
-   img {
+body {
+    background: linear-gradient(135deg, #e6f0ff, #ffffff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    max-width: 950px;
+    margin:45px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* TITULO */
+h1 {
+    color: #1f3c88;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+p {
+    color: #333;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* IMAGEN */
+img {
     display: block;
-    margin: 50px auto;
-    }
+    margin: 30px auto;
+    border-radius: 15px;
+}
 
-    body {
-        background-color: #e6f0ff;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+/* BOTONES */
+.botones {
+    text-align: center;
+    margin-top: 20px;
+}
 
-    h1 {
-        color: #1f3c88;
-        text-align: center;
-        font-size : 50px;
-    }
-
-    p {
-        color:#333333;
-        font-size: 32px;
-        margin-top:30px;
-    }
-
-    a {
-        display: block;
-        margin-top: 20px;
-        color: #6e6e6e;
-        text-decoration: none;
-        font-weight: bold;
-        font-size : 28px;
-    }
-    button {
-    background-color: #4caf50;
+button {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
     color: white;
     border: none;
-    padding: 12px 20px;
-    margin: 10px;
-    font-size: 18px;
-    border-radius: 8px;
+    padding: 14px 22px;
+    margin: 8px;
+    font-size: 16px;
+    border-radius: 10px;
     cursor: pointer;
-    }
+    transition: 0.5s;
+}
 
-    button:hover {
-    background-color: #3e8e41;
-    }
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #43a047, #1b5e20);
+}
 
-    .seccion {
+/* SECCIONES */
+.seccion {
     margin-top: 30px;
-    padding: 15px;
-    }
+    padding: 20px;
+    border-radius: 15px;
+    background: #f5f7ff;
+}
 </style>
 
     <title>CONECTA+</title>
 </head>
+
 <body> 
+
+<div class="container">
+
 <h1>CONECTA+</h1>
 <img src="RECURSOS/robotzito_kawai.jpg" alt="imagen de robotsito kawai" width="650">
 <p>Mediante diversas actividades recreativas, CONECTA+ tiene como propósito ser una guía en los procesos de comunicación y resolución de conflictos comunes dentro de una familia.
@@ -102,6 +122,6 @@ function mostrarSeccion(id) {
     document.getElementById(id).style.display = "block";
 }
 </script>
-
+</div>
 </body>
 </html>
