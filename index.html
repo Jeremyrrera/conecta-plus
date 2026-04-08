@@ -33,6 +33,7 @@ p {
     color: #333;
     font-size: 22px;
     text-align: center;
+    font-family: 'Times New Roman', Times, serif ;
 }
 
 /* IMAGEN */
@@ -40,6 +41,7 @@ img {
     display: block;
     margin: 30px auto;
     border-radius: 15px;
+
 }
 
 /* BOTONES */
@@ -72,11 +74,19 @@ button:hover {
     border-radius: 15px;
     background: #f5f7ff;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.8s ease;
+    display: block;
 }
 
 .seccion:hover {
     transform: translateY(-5px);
+}
+.seccion.activa {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 /* 📱 MODO CELULAR */
 @media (max-width: 768px) {
@@ -129,36 +139,37 @@ button:hover {
     <button onclick="mostrarSeccion('ADVICES')">🙌 ADVICES</button>
     <button onclick="mostrarSeccion('ALBUM')">🎶 ÁLBUM</button>
 </div>
-<div id="FUN" class="seccion">
+<div id="FUN" class="seccion activa">
     <h2>Juego: ¿Qué harías si...?</h2>
     <p>¿Qué harías si tu hijo/a no quisiera hablar contigo después de un mal día?</p>
 </div>
-<div id="CHALLENGUE" class="seccion" style="display:none;">
+<div id="CHALLENGUE" class="seccion" >
     <h2>Reto semanal</h2>
     <p>Escriban 3 cosas que admiran el uno del otro.</p>
 </div>
 
-<div id="READINGS" class="seccion" style="display:none;">
+<div id="READINGS" class="seccion" >
     <h2>Lectura compartida</h2>
     <p>Lean juntos un artículo sobre comunicación asertiva y comenten qué aprendieron.</p>
 </div>
 
-<div id="ADVICES" class="seccion" style="display:none;">
+<div id="ADVICES" class="seccion">
     <h2>Recomendaciones</h2>
     <p>Previo a la aplicación de cualquiera de la actividades recreativas,se recomienda hacer un pacto de mutuo respeto, pues, para dar uso de las herramientas, se va a requerir de completa honestidad y se quiere evitar inconvenientes. El ojetivo es crecer como familia. </p>
 </div>
-<div id="ALBUM" class="seccion" style="display:none;">
+<div id="ALBUM" class="seccion">
     <h2>PEQUEÑAS MUESTRAS DE AVANCES</h2>
     <p>El propósito de esta sección apodada 🎶ALBUM es que usted y su hijo desarrollen su vínculo a través de música, videos, libros o cualquier cosa que genere conexión entre ustedes.</p>
-
+</div>
 <script>
 function mostrarSeccion(id) {
-    document.getElementById('FUN').style.display = "none";
-    document.getElementById('CHALLENGUE').style.display = "none";
-    document.getElementById('READINGS').style.display = "none";
-    document.getElementById('ADVICES').style.display = "none";
-    document.getElementById('ALBUM').style.display = "none";
-    document.getElementById(id).style.display = "block";
+    let secciones = document.querySelectorAll('.seccion');
+
+    secciones.forEach(sec => {
+        sec.classList.remove('activa');
+    });
+
+    document.getElementById(id).classList.add('activa');
 }
 </script>
 </div>
